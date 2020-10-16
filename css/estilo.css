@@ -1,0 +1,241 @@
+* {
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+hr {
+   border: gray solid 1px;
+   margin: 1% 1%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+
+/* Menu */
+
+.links {
+    color: #FFFAFC;
+    font-size: 25px;
+    display: inline-block;
+    margin-left: 15%;
+    width: auto;
+    vertical-align: 90%;
+}
+
+.links2 {
+    margin-left: 25%;
+}
+
+.menu img{
+    width: 10%;
+    height: 75%;
+    margin-top: 1%;
+    margin-left: 0.5%;
+}
+
+.menu {
+    background-color: mediumblue;
+    height: 90px;
+    width: 100%;
+    margin-bottom: 4%;
+    margin-top: 0.8%;
+}
+
+.menu li {
+    width: 100%;
+}
+
+/* Fim Menu */
+
+
+/* Main */
+
+main {
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 30%;
+}
+
+main  p{
+    margin-top: 15px;
+}
+
+
+/* Cabeçalho */ 
+
+
+footer {
+    text-align: center;
+    margin-top: 10%;
+}
+
+
+.imgpagamento {
+    width: 40%;
+}
+
+
+}
+.p_cabeçalho {
+    font-size: 2;
+}
+
+.h4pagamento {
+    color: midnightblue;
+    
+}
+
+/* Fim Cabeçalho */
+
+
+/* Pagina Produtos */
+
+.h1_produtos {
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.categoria {
+    width: 9%;
+    padding: 0% 0% 0.3% 1.5%;
+    display: inline-block;
+}
+
+.box_produtos {
+    width: 18%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: bottom;
+}
+.box_produtos img {
+    width: 120px;
+    margin-bottom: 1%;
+}
+
+.preçoAntigo {
+    font-size: 2;
+}
+
+.preçoAntigo {
+    text-decoration: line-through;
+}
+
+.preçoAtual {
+    font-size: 4;
+    color: #FF1001;
+}
+
+
+.produtos {
+    margin-top: -10.5%;
+    margin-left: 10%;
+    display: absolute;
+    text-align: justify;
+    width: 90%;
+}
+
+/* Fim Pagina Produtos */
+
+
+
+/* Pagina Lojas */
+
+.lojas {
+    border: 0px;
+    width: 100%;
+    padding: 20;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.lojas td {
+    width: 33%;
+}
+
+/* Fim Pagina Lojas */
+
+/* Pagina Contato */
+
+.contatos{
+    border:0px;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    margin-top: 1%;
+}
+
+.form_contatos {
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.h1_contatos {
+    text-align: center;
+    margin-top: 2%;
+}
+
+
+.contatos td {
+    width: 50%;
+}
+
+.contatos p {
+    font-size: 4;
+}
+
+#img1 {
+    width: 25px;
+    border-radius: 5px;
+    border: 2px solid cornflowerblue;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#img2 {
+    width: 28px;
+    border-radius: 5px;
+    border: 2px solid cornflowerblue;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#img3 {
+    width: 25px;
+    border-radius: 5px;
+    border: 2px solid cornflowerblue;
+    margin-top: 1%;
+    margin-bottom: 1%;
+} 
+
+#img4 {
+    width: 28px;
+    border-radius: 5px;
+    border: 2px solid cornflowerblue;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+
+.contatos2 input {
+    width: 400px;
+    border: 2px solid cornflowerblue;
+    border-radius: 10px;
+}
+
+.contatos2 textarea {
+    width: 400px;
+    height: 200px;
+    border: 2px solid cornflowerblue;
+    border-radius: 10px;
+}
+
+/* Fim Pagina Contato */
