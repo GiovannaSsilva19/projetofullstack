@@ -10,7 +10,7 @@ CREATE TABLE `pedidos` (
 `quantidade_produto` int NOT NULL,
 `valor_total_pedido` decimal(15,2) NOT NULL,
 PRIMARY KEY (`idpedidos`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Tabela para identificar os pedidos dos clientes do fs eletro';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 UPDATE `fseletro`.`pedidos` SET `telefone_cliente` = '(11)5555-6666', `valor_unitario` = 'R$ 611.00', `quantidade_produto` = '2', `valor_total_pedido` = 'R$1222' WHERE (`idpedidos` = '1');
 UPDATE `fseletro`.`pedidos` SET `telefone_cliente` = '(11)9999-8888', `valor_unitario` = 'R$ 415.00', `quantidade_produto` = '1', `valor_total_pedido` = 'R$415.00' WHERE (`idpedidos` = '2');
@@ -23,7 +23,7 @@ CREATE TABLE `produtos` (
 `preco_produto` decimal(15,2) NOT NULL,
 `imagem` varchar(100) NOT NULL,
 PRIMARY KEY (`idprodutos`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Tabela para cadastrar os produtos do cliente fs eletro';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ;
 
 UPDATE `fseletro`.`produtos` SET `preco_produto` = 'R$ 5199.00' WHERE (`idprodutos` = '1');
 UPDATE `fseletro`.`produtos` SET `preco_produto` = 'R$1499.00' WHERE (`idprodutos` = '2');
