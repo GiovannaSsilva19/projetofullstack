@@ -1,3 +1,16 @@
+<?php
+    # Conexão
+    $link = mysqli_connect('localhost','root', '', 'fseletro');
+    # Verificando a conexão
+    if (!$link) {
+        die ("Falha na conexão com o BD". mysqli_connect_erro());
+    }   else {
+        echo "Sucesso ao se conectar no banco de dados";
+    }
+    
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,10 +24,10 @@
 <body>
  <!--Menu-->
  <div class="menu">
-    <a href="index.html"><img src="./imagens/logo.jpg" alt="GsouzaEletro"></a>        
-    <a class="links"  href="produtos.html">Produtos</a>
-    <a class="links"  href="loja.html">Lojas</a>
-    <a class="links"  href="contato.html">Contato</a>
+    <a href="index.php"><img src="./imagens/logo.jpg" alt="GsouzaEletro"></a>        
+    <a class="links"  href="produtos.php">Produtos</a>
+    <a class="links"  href="loja.php">Lojas</a>
+    <a class="links"  href="contato.php">Contato</a>
 </div>     
 <!--Fim Menu-->
 
