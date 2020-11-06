@@ -1,3 +1,26 @@
+<?php
+    # Conexão
+    $link = mysqli_connect('localhost','root', '','fseletro');
+    # Verificando a conexão
+    if (!$link) {
+        die ("Falha na conexão com o BD". mysqli_connect_erro());
+    }   else {
+        echo "Sucesso ao se conectar no banco de dados";
+    }
+    if (isset($_POST['nome']) && isset ($_POST['msg'])){
+        $nome=$_POST['nome'];
+        $msg=$_POST['msg'];
+
+
+
+        $sql="insert into comentarios (nome,msg values ('$nome', '$msg')";
+        $result=$conn->query($sql);
+    }
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,14 +32,11 @@
 <body>
 
 <!--Menu-->
-<div class="menu">
-    <a href="index.html"><img src="./imagens/logo.jpg" alt="GsouzaEletro"></a>        
-    <a class="links"  href="produtos.html">Produtos</a>
-    <a class="links"  href="loja.html">Lojas</a>
-    <a class="links"  href="contato.html">Contato</a>
-</div>    
+   
 <!--Fim Menu-->
-
+<?php
+    include " menu.html"
+    ?<  
     <header>
         <h1 class="h1_contatos">Contato</h1><hr>
     </header>
@@ -48,12 +68,35 @@
 
   
     <form class="contatos2">
-        <h4>Email: </h4>
+        <h4>Nome: </h4>
         <input type="text">
-        <h4>Pedido: </h4> 
+        <h4>Mensagem: </h4> 
         <textarea></textarea><br><br>
         <input type="submit" value="Enviar">
     </form>
+
+<?php
+
+   $sql="select * from produtos";
+   $result= $conn->query($sql);
+
+   if($result->num_rows > 0){
+    
+      while($rows = $result-> fetch_assoc)()){
+         echo "Data: ", $rows['data']; "<br>";
+         echo "Nome: ", $rows['nome']; "<br>";
+         echo "Mensagem: ", $rows['msg']; "<br>";
+         echo "<hr>";
+
+        }   
+    } else {
+       echo "Nenhum comentário ainda!";
+    }
+
+?>   
+       
+
+  
     
     
     <!--Cabeçalho-->

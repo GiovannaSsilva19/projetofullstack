@@ -7,15 +7,13 @@
     <link rel="stylesheet" href="css/estilo.css">
 
 </head>
+
+
 <body>
     <!--Menu-->
-    <div class="menu">
-            <a href="index.html"><img src="./imagens/logo.jpg" alt="GsouzaEletro"></a>        
-            <a class="links"  href="produtos.html">Produtos</a>
-            <a class="links"  href="loja.html">Lojas</a>
-            <a class="links"  href="contato.html">Contato</a>
-    </div>    
-    <!--Fim Menu-->
+    <?php
+    include " menu.html"
+    ?<
 
     <!-- Main -->
     <main>
