@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gsouza Eletro </title>
     <link rel="stylesheet" href="css/estilo.css">
+    <<script src="js/funçoes.js"></script>
 
 </head>
 <body>
@@ -24,6 +25,32 @@
          <p> Faça suas compras aqui na GSOUZA ELETRO! Onde bom atendimento e qualidade,andam lado a lado.  </p>
     </main>
     <!-- Fim Main -->
+    <?php
+        $servername = "localhost";
+        $username = "root";
+        $passoword = "";
+        $database = "fseletro";
+
+        $conn = mysqli_connect($servername,$username,$passoword, $database);
+        
+        // if(isset($_POST['nome']) && isset($_POST['email'] )) {
+        //     echo "dados recebidos";
+
+            $nome = $_POST['nome'];
+            $email = $_POST ['email'];
+
+            $sql = "Insert into mensagem (nome, email) values ('$nome','$email')";
+            $result = $conn ->query($sql);
+
+            if($result){
+                echo "cadastrado dev :)";
+            } else {
+                echo "";
+            }
+
+        // }
+
+        ?>
 
     <!--Cabeçalho-->
     <footer>

@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gsouza Eletro </title>
     <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/funçoes.js"></script>
+
 </head>
 <body>
+
  <!--Menu-->
  <div class="menu">
     <a href="index.php"><img src="./imagens/logo.jpg" alt="GsouzaEletro"></a>        
@@ -45,6 +48,15 @@
 
     </table>
     
+    <section class="newsletter">
+       <h3>Nesletter</h3>
+       <p>Dev´s receba nossas promoçoes por-mail</p>
+       <form method="POST">
+           <input type="text" placeholder="Seu Nome ">
+           <input type="email" placeholder="Seu Email">
+           <button>Cadastrar</button>
+       </form>
+   </section>
     
    <!--Cabeçalho-->
    <footer>
