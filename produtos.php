@@ -18,14 +18,11 @@
 
         $conn = mysqli_connect($servername,$username,$passoword, $database);
         
-        // if (! $conn){
-        //     die("deu ruim". mysqli_connect_error());
-        // }
+         if (!$conn)  {
+             die("deu ruim". mysqli_connect_error());
+         }
 
        
-
-
-
 
 
         ?>
@@ -34,28 +31,26 @@
 
 
  <!--Menu-->
- <div class="menu">
-    <a href="index.php"><img src="./imagens/logo.jpg" alt="GsouzaEletro"></a>        
-    <a class="links"  href="produtos.php">Produtos</a>
-    <a class="links"  href="loja.php">Lojas</a>
-    <a class="links"  href="contato.php">Contato</a>
-</div>     
+ <?php
+        require('menu.html');
+   ?>   
 <!--Fim Menu-->
 
      <header>
         <h1 class="h1_produtos">Produtos</h1><hr>
      </header>
     
-    <section class="categorias"> 
-        <h3>Categorias</h3>
+     <div class="row container-fluid mx-0 px-0 align-items-start">    
+    <section class="indice ml-4 mr-0  col-sm-2"> 
+        <h3 class="mt-3 mb-5" >Categorias</h3>
             <ul>
-                <li onclick="exibir_todos()">Todos(11)</li>
-                <li onclick="exibir_categoria('Geladeira')">Geladeira(3)</li>
-                <li onclick="exibir_categoria('Fogão')">Fogões(2)</li>
-                <li onclick="exibir_categoria('Microondas')">Microondas(2)</li>
-                <li onclick="exibir_categoria('Fornoeletrico')">Forno Elétrico(2)</li>
-                <li onclick="exibir_categoria('Liquidificador')">Liquidificador(1)</li>
-                <li onclick="exibir_categoria('Fritadeiraeletrica')">Fritadeita Elétrica(1)</li>
+                <li class="my-3" onclick="exibir_todos()">Todos(11)</li>
+                <li class="my-3" onclick="exibir_categoria('Geladeira')">Geladeira(3)</li>
+                <li class="my-3" onclick="exibir_categoria('Fogão')">Fogões(2)</li>
+                <li class="my-3" onclick="exibir_categoria('Microondas')">Microondas(2)</li>
+                <li class="my-3" onclick="exibir_categoria('Fornoeletrico')">Forno Elétrico(2)</li>
+                <li class="my-3" onclick="exibir_categoria('Liquidificador')">Liquidificador(1)</li>
+                <li class="my-3" onclick="exibir_categoria('Fritadeiraeletrica')">Fritadeita Elétrica(1)</li>
             </ul>
             
     </section>
@@ -64,22 +59,26 @@
 
 <?php
 
-$sql = "select * from produtosfs";
+$sql = "select * from produtos";
 $result = $conn->query($sql);
 
+echo '<pre>';
+print_r ($result);
+echo '</pre>';
+
 if($result->num_rows >0){
-    while($rows = $result ->fetch_assoc()){            
+    while ($rows = $result->fetch_assoc()) {            
 
 
  ?>   
-
-        <div class="divprodutos boxprodutos"  style="display: block;">
-            <img class="imgproduto" id="imgproduto1"  src="<?php  echo $rows["nomeimg"]; ?>" alt="" onclick="destaque(this) />
+        
+        <div class="col-sm-4 my-3" id=  style="display: block;">
+            <img class="imagem" id="produtos"  src="<?php  echo $rows["imagem"]; ?>" alt="" onclick="destaque(this) />
             </br>
-            <p class= "nomeproduto"> <?php  echo $rows["nome"]; ?> </p>
+            <p class= "nomeproduto"> <?php  echo $rows["nome_produto"]; ?> </p>
             <hr>
-            <p class="valorproduto"> <?php  echo $rows["preço"]; ?> </p>
-            <p class="valoratual"> <?php  echo $rows["precoatual"]; ?> </p>
+            <p class="descrição" > <?php  echo $rows["descricao_produto"]; ?> </p>
+            <p class="preco"> <?php  echo $rows["preco_produto"]; ?> </p>
         </div>
 
         
@@ -97,11 +96,9 @@ if($result->num_rows >0){
         
     
     <!--Fomas de pagamento-->
-    <footer>
-        <h4 class="h4pagamento">Formas de Pagamento</h4>
-        <img class="imgpagamento"  src="imagens/forma de pagamento.jpg" alt="Formas de Pagamento">
-        <p class="final"> &copy;RecodePro 2020</p>
-    </footer>
+    <?php
+        require('footer.html');
+    ?>
     
     <!--Fim Cabeçalho-->
 </body>

@@ -7,16 +7,10 @@
     <link rel="stylesheet" href="css/estilo.css">
     <script src="js/funçoes.js"></script>
 </head>
-<body>
-
-<!--Menu-->
-<div class="menu">
-    <a href="index.php"><img src="./imagens/logo.jpg" alt="GsouzaEletro"></a>        
-    <a class="links"  href="produtos.php">Produtos</a>
-    <a class="links"  href="loja.php">Lojas</a>
-    <a class="links"  href="contato.php">Contato</a>
-</div>    
-<!--Fim Menu-->
+<body class="container-fluid px-0">
+    <?php
+        require('menu.html');
+   ?>
 
     <header>
         <h1 class="h1_contatos">Contato</h1><hr>
@@ -47,15 +41,21 @@
 
     </table>
 
-  
-    <form class="contatos2">
-        <h4>Email: </h4>
-        <input type="text">
-        <h4>Pedido: </h4> 
-        <textarea></textarea><br><br>
-        <input type="submit" value="Enviar">
+    <form class="form-group text-center mt-5 mb-5 container-fluid" action="" method="post">
+        <div class="row align-items-center justify-content-center">
+        <label for="nome" class="col-sm-2 col-form-label "><h4>Nome: </h4></label>
+        <input class="form-control-sm col-sm-2 form-control-plaintext" type="text" name="nome" placeholder="Digite seu nome">
+        </div>
+        <div class="row align-items-center justify-content-center mt-3">
+        <label for="msg" class="col-sm-2 col-form-label"><h4>Mensagem: </h4></label>
+        <textarea class="form-control-lg col-sm-2 form-control-plaintext" name="msg" placeholder="Digite sua mensagem"></textarea>
+        </div>
+        <div class="row align-items-center justify-content-center">
+        <input class="btn btn-danger col-sm-1 mt-5" onclick="exibeMsg()" type="submit" value="Enviar">
+        </div>
     </form>
-    
+
+   
     
     <!--Cabeçalho-->
     <footer>

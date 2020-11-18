@@ -1,31 +1,24 @@
-function exibir_categoria(categorias){
-    let elementos = document.getElementsByClassName('boxProduto');
-    console.log(elementos);
-    for(let i=0; i<elementos.length;i++){
-    console.log(elementos[i].id);
-      if(categorias == elementos[i].id)
-        elementos[i].style = 'display:inline-block';
-        else{
-            elementos[i].style = 'display: none';                     
+function exibir_categoria(categoria) {
+ let produtos = document.getElementsByClassName('box_produtos');
+  for (i=0; i < produtos.length; i++) {
+      if(categoria == produtos[i].id) {
+          produtos[i].style = "display:inline-block";
+      } else {
+        produtos[i].style = "display:none";
+      }
+  }
 
-        }
-    }
-}
-
-let exibir_todos = ()=> {    
-        let elementos = document.getElementsByClassName('boxProduto');
-        for(let i=0; i<elementos.length;i++){         
-            elementos[i].style = 'display:inline-block';        
-        }    
 };
 
-let destaque = (imagem) =>{
-    if(imagem.width == 240)
-        imagem.style = 'width:120px';
-    else
-      imagem.style = 'width:240px';
-      
-}
+function exibir_todos(){
+    let produtos = document.getElementsByClassName('box_produtos');
+    for (i=0; i < produtos.length; i++) {
+        if(produtos.length <= 12) {
+            produtos[i].style = "display:inline-block";
+        } 
+        
+    }
+};
 
 
     

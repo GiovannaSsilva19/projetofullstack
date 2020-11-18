@@ -9,6 +9,7 @@ CREATE TABLE `pedidos` (
 `valor_unitario` decimal(15,2) NOT NULL,
 `quantidade_produto` int NOT NULL,
 `valor_total_pedido` decimal(15,2) NOT NULL,
+
 PRIMARY KEY (`idpedidos`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 

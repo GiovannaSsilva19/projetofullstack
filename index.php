@@ -4,19 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gsouza Eletro </title>
+
     <link rel="stylesheet" href="css/estilo.css">
     <<script src="js/funçoes.js"></script>
 
 </head>
-<body>
-    <!--Menu-->
-    <div class="menu">
-            <a href="index.php"><img src="./imagens/logo.jpg" alt="GsouzaEletro"></a>        
-            <a class="links"  href="produtos.php">Produtos</a>
-            <a class="links"  href="loja.php">Lojas</a>
-            <a class="links"  href="contato.php">Contato</a>
-    </div>    
-    <!--Fim Menu-->
+<body class="container-fluid px-0">
+    <?php
+        require('menu.html');
+    ?>
+    
 
     <!-- Main -->
     <main>
@@ -53,11 +50,9 @@
         ?>
 
     <!--Cabeçalho-->
-    <footer>
-        <h4 class="h4pagamento">Formas de Pagamento</h4>
-        <img class="imgpagamento"  src="./imagens/forma de pagamento.jpg" alt="Formas de Pagamento">
-        <p class="final"> &copy;RecodePro 2020</p>
-    </footer>
+    <?php
+        require('footer.html');
+    ?>
     
     <!--Fim Cabeçalho-->
 </body>
