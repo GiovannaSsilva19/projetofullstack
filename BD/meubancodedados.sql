@@ -40,11 +40,9 @@ INSERT INTO `fseletro`.`produtos` (`nome_produto`, `descricao_produto`, `preco_p
 INSERT INTO `fseletro`.`produtos` (`nome_produto`, `descricao_produto`, `preco_produto`, `imagem`) VALUES ('Liquidificado', 'Liquidificador Mondial Turbo Power L-99 FB 2.2 Litros com Filtro 3 Velocidades', 'R$89.90', 'imagens/liqui1.jpg');
 INSERT INTO `fseletro`.`produtos` (`nome_produto`, `descricao_produto`, `preco_produto`, `imagem`) VALUES ('Fritadeira Elétrica', 'Fritadeira Elétrica Airfryer Viva Philips Walita', 'R$999,90', 'imagens/frita.jpg');
 
-CREATE TABLE `fseletro`.`mensagem` (
-  `id` INT(11) NOT NULL,
+CREATE TABLE `fseletro`.`mensagemok` (
+  `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(80) NOT NULL,
-  `email` VARCHAR(80) NOT NULL);
+  `email` VARCHAR(80) NOT NULL,
+  PRIMARY KEY (`id`));
 
-INSERT INTO `fseletro`.`mensagem` (`id`, `nome`, `email`) VALUES ('1', 'daiana ', 'daiana@gmail.com');
-INSERT INTO `fseletro`.`mensagem` (`id`, `nome`, `email`) VALUES ('2', 'paulo', 'paulo@hotmail.com');
-INSERT INTO `fseletro`.`mensagem` (`id`, `nome`, `email`) VALUES ('3', 'roberto', 'roberto@gmail.com');

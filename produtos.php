@@ -44,13 +44,13 @@
     <section class="indice ml-4 mr-0  col-sm-2"> 
         <h3 class="mt-3 mb-5" >Categorias</h3>
             <ul>
-                <li class="my-3" onclick="exibir_todos()">Todos(11)</li>
-                <li class="my-3" onclick="exibir_categoria('Geladeira')">Geladeira(3)</li>
-                <li class="my-3" onclick="exibir_categoria('Fogão')">Fogões(2)</li>
-                <li class="my-3" onclick="exibir_categoria('Microondas')">Microondas(2)</li>
-                <li class="my-3" onclick="exibir_categoria('Fornoeletrico')">Forno Elétrico(2)</li>
-                <li class="my-3" onclick="exibir_categoria('Liquidificador')">Liquidificador(1)</li>
-                <li class="my-3" onclick="exibir_categoria('Fritadeiraeletrica')">Fritadeita Elétrica(1)</li>
+                <li class="my-3" href="#void" onclick="exibir_todos()">Todos(11)</li>
+                <li class="my-3" href="#void" onclick="exibir_categoria('Geladeira')">Geladeira(3)</li>
+                <li class="my-3" href="#void" onclick="exibir_categoria('Fogão')">Fogões(2)</li>
+                <li class="my-3" href="#void" onclick="exibir_categoria('Microondas')">Microondas(2)</li>
+                <li class="my-3" href="#void" onclick="exibir_categoria('Fornoeletrico')">Forno Elétrico(2)</li>
+                <li class="my-3" href="#void" onclick="exibir_categoria('Liquidificador')">Liquidificador(1)</li>
+                <li class="my-3" href="#void" onclick="exibir_categoria('Fritadeiraeletrica')">Fritadeita Elétrica(1)</li>
             </ul>
             
     </section>
