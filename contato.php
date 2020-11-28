@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -48,9 +51,19 @@
              $nome = $_GET['nome'];
              $email = $_GET['email'];
 
-             
-             $sql = "insert into mensagemok (nome,email) values('$nome','$email')";
+           $sql = "insert into mensagemok (nome,email) values('$nome','$email')";
              $result = $conn->query($sql); 
+
+             if($result){
+                 echo "cadastro realizado : $nome,$email";
+                 $array =array('um' => '$nome','dois'=>'$email');
+                 print_r($array);
+                 json_encode($array);
+                 print_r($array);
+             } else {
+                 echo "";
+             }
+             
          }
 
 
