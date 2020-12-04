@@ -46,3 +46,9 @@ CREATE TABLE `fseletro`.`mensagemok` (
   `email` VARCHAR(80) NOT NULL,
   PRIMARY KEY (`id`));
 
+
+CREATE TABLE `fseletro`.`vendedores` (
+  `nome` VARCHAR(45) NOT NULL,
+  `telefone` VARCHAR(11) NOT NULL,
+  PRIMARY KEY (`nome`));
+
